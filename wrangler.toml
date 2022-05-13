@@ -1,0 +1,7 @@
+name = "analytics-pulpproject-org"
+main = "src/index.ts"
+compatibility_date = "2022-05-12"
+
+kv_namespaces = [
+  { binding = "KV", id = "0edde4fb9f784f47b9964e7e932a1c9c", preview_id = "0edde4fb9f784f47b9964e7e932a1c9c" }
+]
