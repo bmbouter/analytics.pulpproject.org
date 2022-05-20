@@ -1,11 +1,32 @@
-name = "analytics-pulpproject-org"
 main = "src/index.ts"
 compatibility_date = "2022-05-12"
-
-kv_namespaces = [
-  { binding = "RAW", id = "ee9fa648eb9b494d9a148b0e8a5ab15d", preview_id = "ee9fa648eb9b494d9a148b0e8a5ab15d" },
-  { binding = "SUMMARY", id = "1bbca939cb82428e9b39e44157278f4f", preview_id = "1bbca939cb82428e9b39e44157278f4f" }
-]
+workers_dev = true
 
 [triggers]
 crons = ["* 0 * * *"]
+
+[env.production]
+name = "analytics-pulpproject-org"
+
+kv_namespaces = [
+  { binding = "RAW", id = "4e3a9bbd8ae542828ccf63030e844759", preview_id = "4e3a9bbd8ae542828ccf63030e844759" },
+  { binding = "SUMMARY", id = "7ddbf45f05ae4619a88cb997af71188d", preview_id = "7ddbf45f05ae4619a88cb997af71188d" }
+]
+
+
+[env.staging]
+name = "staging-analytics-pulpproject-org"
+
+kv_namespaces = [
+  { binding = "RAW", id = "eb47fbb6647b42b2b9b4cbf6808c080f", preview_id = "eb47fbb6647b42b2b9b4cbf6808c080f" },
+  { binding = "SUMMARY", id = "0b4a80f2765942ccb026ca7167356f08", preview_id = "0b4a80f2765942ccb026ca7167356f08" }
+]
+
+
+[env.dev]
+name = "dev-analytics-pulpproject-org"
+
+kv_namespaces = [
+  { binding = "RAW", id = "bd79a1c491ce493ea41856a4182baf67", preview_id = "bd79a1c491ce493ea41856a4182baf67" },
+  { binding = "SUMMARY", id = "5cf21dbae6484fbabeea9e8593e90daf", preview_id = "5cf21dbae6484fbabeea9e8593e90daf" }
+]
