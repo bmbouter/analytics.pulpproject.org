@@ -1,4 +1,6 @@
+import { handleGet } from "./handlers/get";
 import { handlePost } from "./handlers/post";
+import { handleSchedule } from "./handlers/schedule";
 
 
 const html = `<!DOCTYPE html>
@@ -9,10 +11,17 @@ const html = `<!DOCTYPE html>
 
 
 addEventListener('fetch', event => {
-  if (event.request.method === "POST") {
+  if (event.request.method === "GET") {
+    event.respondWith(handleGet(event.request));
+  } else if (event.request.method === "POST") {
     event.respondWith(handlePost(event.request));
+  } else if (event.request.method === "PUT") {
+    event.respondWith(handleSchedule(event.request));
   } else {
     event.respondWith(new Response(null, { status: 405 }));
   }
 });
 
+addEventListener("scheduled", (event) => {
+  // event.waitUntil(handleSchedule(event));
+});

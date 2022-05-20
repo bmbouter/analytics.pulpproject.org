@@ -3,5 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2022-05-12"
 
 kv_namespaces = [
-  { binding = "KV", id = "0edde4fb9f784f47b9964e7e932a1c9c", preview_id = "0edde4fb9f784f47b9964e7e932a1c9c" }
+  { binding = "RAW", id = "ee9fa648eb9b494d9a148b0e8a5ab15d", preview_id = "ee9fa648eb9b494d9a148b0e8a5ab15d" },
+  { binding = "SUMMARY", id = "1bbca939cb82428e9b39e44157278f4f", preview_id = "1bbca939cb82428e9b39e44157278f4f" }
 ]
+
+[triggers]
+crons = ["* * * * *"]
