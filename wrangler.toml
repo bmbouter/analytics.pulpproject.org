@@ -14,15 +14,6 @@ kv_namespaces = [
 vars = {WORKER_ENV = "production"}
 
 
-[env.staging]
-name = "staging-analytics-pulpproject-org"
-kv_namespaces = [
-  { binding = "RAW", id = "eb47fbb6647b42b2b9b4cbf6808c080f", preview_id = "eb47fbb6647b42b2b9b4cbf6808c080f" },
-  { binding = "SUMMARY", id = "0b4a80f2765942ccb026ca7167356f08", preview_id = "0b4a80f2765942ccb026ca7167356f08" }
-]
-vars = {WORKER_ENV = "staging"}
-
-
 [env.dev]
 name = "dev-analytics-pulpproject-org"
 kv_namespaces = [
