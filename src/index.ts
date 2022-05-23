@@ -17,7 +17,10 @@ addEventListener('fetch', event => {
   } else if (event.request.method === "POST") {
     event.respondWith(handlePost(event.request));
   } else if (event.request.method === "PUT") {
-    event.respondWith(handleSchedule());
+    if (WORKER_ENV == "dev") {
+      // let's only allow manual triggering in the 'dev' environment
+      event.respondWith(handleSchedule());
+    }
   } else {
     event.respondWith(new Response(null, { status: 405 }));
   }
