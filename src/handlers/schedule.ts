@@ -81,9 +81,7 @@ async function write_data_point(key: string, data: string | number): Promise<voi
 }
 
 
-export async function handleSchedule(
-  request: CfRequest,
-): Promise<Response> {
+export async function handleSchedule(): Promise<Response> {
   const list = await RAW.list();
 
   console.log('Keys found are: ');

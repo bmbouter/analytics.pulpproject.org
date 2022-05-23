@@ -1,6 +1,7 @@
 import { handleGet } from "./handlers/get";
 import { handlePost } from "./handlers/post";
 import { handleSchedule } from "./handlers/schedule";
+import {CfRequest} from "./data";
 
 
 const html = `<!DOCTYPE html>
@@ -16,12 +17,12 @@ addEventListener('fetch', event => {
   } else if (event.request.method === "POST") {
     event.respondWith(handlePost(event.request));
   } else if (event.request.method === "PUT") {
-    event.respondWith(handleSchedule(event.request));
+    event.respondWith(handleSchedule());
   } else {
     event.respondWith(new Response(null, { status: 405 }));
   }
 });
 
 addEventListener("scheduled", (event) => {
-  // event.waitUntil(handleSchedule(event));
+  event.waitUntil(handleSchedule());
 });
