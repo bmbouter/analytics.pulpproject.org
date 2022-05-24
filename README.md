@@ -44,9 +44,9 @@ that has the millisecond epoch time as the first item and the value, e.g. a numb
 To do local development of the website first clone the repository and install and configure
 `wrangler`. After logging in with `wrangler` you can:
 
-Run the local worker code with `wrangler dev src/index.ts --port 29439 --env dev`.
-Push the code to the hosted dev environment with `wrangler publish --env dev`.
-Show the cloudflare logs with `wrangler tail --env dev`.
+* Run the local worker code with `wrangler dev src/index.ts --port 29439 --env dev`.
+* Push the code to the hosted dev environment with `wrangler publish --env dev`.
+* Show the cloudflare logs with `wrangler tail --env dev`.
 
 ## Sites
 

@@ -69,10 +69,6 @@ async function write_data_point(key: string, data: string | number): Promise<voi
     existing_value = [new_data_point]
   } else {
     console.log('appending to existing data entry');
-
-    const last_item = existing_value[existing_value.length - 1];  // hack to simulate a summary per day
-    new_data_point[0] = last_item[0] + 86400000;  // hack to simulate a summary per day
-
     existing_value.push(new_data_point);
   }
 
