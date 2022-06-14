@@ -48,6 +48,21 @@ To do local development of the website first clone the repository and install an
 * Push the code to the hosted dev environment with `wrangler publish --env dev`.
 * Show the cloudflare logs with `wrangler tail --env dev`.
 
+## Creating / Deleting KV Namespaces
+
+For example, to delete the dev namespace RAW use:
+
+`wrangler kv:namespace delete --binding SUMMARY --env dev --preview`
+
+You need the preview in there to allow your local dev environment to also have access to it in
+concert with the KV on workers.dev.
+
+Then you can create one again with:
+
+`wrangler kv:namespace create RAW --env dev --preview`
+
+Then add the `preview_id` as the `id` in the `wrangler.toml` file for the `dev` section.
+
 ## Sites
 
 | Environment | URL                                                            |

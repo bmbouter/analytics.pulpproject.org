@@ -17,7 +17,7 @@ vars = {WORKER_ENV = "production"}
 [env.dev]
 name = "dev-analytics-pulpproject-org"
 kv_namespaces = [
-  { binding = "RAW", id = "bd79a1c491ce493ea41856a4182baf67", preview_id = "bd79a1c491ce493ea41856a4182baf67" },
-  { binding = "SUMMARY", id = "5cf21dbae6484fbabeea9e8593e90daf", preview_id = "5cf21dbae6484fbabeea9e8593e90daf" }
+  { binding = "RAW", id = "fab96d2472434d31a359d17d2cbf88f6", preview_id = "fab96d2472434d31a359d17d2cbf88f6" },
+  { binding = "SUMMARY", id = "5d9e079ee0124d4eb59dde18b72c2095", preview_id = "5d9e079ee0124d4eb59dde18b72c2095" }
 ]
 vars = {WORKER_ENV = "dev"}
